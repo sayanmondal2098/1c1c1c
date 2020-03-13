@@ -1,8 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
-import Dashboard from './Dashboard';
-
 import "../../Assect/css/main.css"
 import "../../Assect/css/util.css"
 
@@ -38,7 +36,7 @@ class Login extends React.Component {
     handleSubmit(event) {
         alert('A name was submitted: ' + this.state.username + "pass: " + this.state.password);
         event.preventDefault();
-        if (this.state.username == 'Admin' && this.state.password == 'Admin123') {
+        if (this.state.username === 'Admin' && this.state.password === 'Admin123') {
             this.setState({
                 isLoggedIn: true
             })
@@ -55,8 +53,8 @@ class Login extends React.Component {
         return (
             <div>
                 <div className="limiter">
-                    <div className="container-login100">
-                        <div className="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+                    <div className="container">
+                        <div className="wrap p-l-55 p-r-55 p-t-65 p-b-50">
                             <div className="login100-form validate-form">
                                 <span class="login100-form-title p-b-33">
                                     1C1C1 Login
