@@ -344,7 +344,7 @@ input.input100 {
   align-content: center;
   text-align: center;
   color: wheat;
-  background-color: #943be9;
+  background-color: #e9faff ;
   position: relative;
   max-height: calc(100vh - 75px);
   min-height: 100%;
@@ -362,4 +362,14 @@ input.input100 {
   color: #FFFFFF;
   opacity: 1;
   background: rgba(255, 255, 255, 0.23);
+}
+
+.active{
+  padding: 10%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: transparent solid #4CAF50;
+  border-color: wheat;
+  background-color: lightblue  ;
+  border-width: 5%;
+  
 }

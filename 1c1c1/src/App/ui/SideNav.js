@@ -1,7 +1,7 @@
 import React from "react";
 import { } from "bootstrap";
 
-// import "../../Assect/css/argon.css"
+
 import "../../Assect/css/main.css"
 
 
@@ -22,30 +22,32 @@ class SideNav extends React.Component {
                     <div className="sidebar" data-color="purple" >
                         <div className="sidebar-wrapper">
                             <div className="logo">
-                                <a href="" className="simple-text">
+                                <a href="" className="simple-text" style={{ color: "black" }}>
                                     1C1C1
         </a>
                             </div>
                             <ul className="nav" style={{ paddingTop: "30%" }}>
-                                <li className="active" style={{ paddingTop: "50%" }}>
+                                <li  style={{ paddingTop: "50%" }}>
+                                    <div className="active">
                                     <a href="dashboard.html">
                                         
                                         <p>Dashboard</p>
                                     </a>
+                                    </div>
                                 </li>
-                                <li className="active" style={{ paddingTop: "12%" }}>
+                                <li className="active">
                                     <a href="dashboard.html">
                                         
                                         <p>Account</p>
                                     </a>
                                 </li>
-                                <li className="active" style={{ paddingTop: "12%" }}>
+                                <li className="active">
                                     <a href="dashboard.html">
                                        
                                         <p>Dashboard</p>
                                     </a>
                                 </li>
-                                <li className="active" style={{ paddingTop: "12%" }}>
+                                <li className="active">
                                     <a href="dashboard.html">
                                         
                                         <p>Log Out</p>
