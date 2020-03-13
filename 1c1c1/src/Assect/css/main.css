@@ -94,7 +94,8 @@ iframe {
 }
 
 .admincontainer{
-  padding-left: 20%;
+  margin: 2%;
+  padding-left: 12%;
 }
 
 .wrap {
@@ -294,7 +295,6 @@ input.input100 {
 .wrapper {
   position: relative;
   top: 0;
-  height: 100vh;
 }
 
 .sidebar {
@@ -308,12 +308,12 @@ input.input100 {
   z-index: 1;
   color: #fff;
   font-weight: 200;
-  background-size: cover;
-  background-position: center center;
+  /* background-size: cover;
+  background-position: center center; */
 }
 
 .sidebar .sidebar-wrapper {
-  position: relative;
+  position: absolute;
   max-height: calc(100vh - 75px);
   min-height: 100%;
   overflow: auto;
@@ -347,9 +347,9 @@ input.input100 {
   background-color: #e9faff ;
   position: relative;
   max-height: calc(100vh - 75px);
-  min-height: 100%;
+  /* min-height: 100%; */
   overflow: auto;
-  width: 260px;
+  width: 75%;
   z-index: 4;
   padding-bottom: 100px;
 }
@@ -366,10 +366,45 @@ input.input100 {
 
 .active{
   padding: 10%;
+  opacity: 1;
+  margin: 5% 15%;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: transparent solid #4CAF50;
   border-color: wheat;
   background-color: lightblue  ;
   border-width: 5%;
   
+}
+
+
+.topnav {
+  background-color: #e9faff;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a {
+background-color:   lightblue;
+color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #4CAF50;
+color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+float: right;
 }
