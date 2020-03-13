@@ -32,6 +32,7 @@ class Login extends React.Component {
     handleSubmit(event) {
         alert('A name was submitted: ' + this.state.username + "pass: " + this.state.password);
         event.preventDefault();
+        console.log(this.state)
     }
 
     render() {
@@ -42,7 +43,7 @@ class Login extends React.Component {
                         <div className="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
                             <div className="login100-form validate-form">
                                 <span class="login100-form-title p-b-33">
-                                    1C1C1C Login
+                                    1C1C1 Login
 					            </span>
                                 <div className="wrap-input100">
                                     <input className="input100"
