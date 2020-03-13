@@ -1,13 +1,18 @@
 import React from 'react';
-import Login from "./App/ui/Login";
+
+import Navigation from './App/Route/Navigation';
 
 
-function App() {
-  return (
-    <div className="App">
-      <Login />
-    </div>
-  );
+
+
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <Navigation />
+      </div>
+    );
+  }
 }
 
 export default App;

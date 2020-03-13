@@ -3,12 +3,12 @@ import "../../Assect/css/main.css"
 import "../../Assect/css/util.css"
 
 
-class Dashboard extends React.Component{
+class ErrorPage extends React.Component{
     render(){
        return(
-        <h1>Dash Gooo</h1>
+        <h1>ErrorPage</h1>
        );
     }
 }
 
-export default Dashboard
+export default ErrorPage

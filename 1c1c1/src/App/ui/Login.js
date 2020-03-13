@@ -1,4 +1,8 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
+
+import Dashboard from './Dashboard';
+
 import "../../Assect/css/main.css"
 import "../../Assect/css/util.css"
 
@@ -7,9 +11,11 @@ import "../../Assect/css/util.css"
 class Login extends React.Component {
     constructor(props) {
         super(props);
+        let isLoggedIn = false
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            isLoggedIn   
         };
 
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
@@ -32,10 +38,20 @@ class Login extends React.Component {
     handleSubmit(event) {
         alert('A name was submitted: ' + this.state.username + "pass: " + this.state.password);
         event.preventDefault();
+        if (this.state.username == 'Admin' && this.state.password == 'Admin123') {
+            this.setState({
+                isLoggedIn: true
+            })
+        } else {
+            console.log("Error login")
+        }
         console.log(this.state)
     }
 
     render() {
+        if (this.state.isLoggedIn) {
+            return <Redirect to="/Dash"/>
+        }
         return (
             <div>
                 <div className="limiter">
@@ -80,7 +96,7 @@ class Login extends React.Component {
                                         Forgot
 						            </span>
 
-                                    <a href="http://www.example.com" class="txt2 hov1">
+                                    <a href="localhost" class="txt2 hov1">
                                         Username / Password?
 						            </a>
                                 </div>
