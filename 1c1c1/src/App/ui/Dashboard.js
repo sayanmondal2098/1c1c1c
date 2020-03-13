@@ -12,7 +12,8 @@ class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            datas: []
+            datas: [],
+            accountBalance: []
         };
 
     }
@@ -44,14 +45,16 @@ class Dashboard extends React.Component {
         return (
             <div>
                 <SideNav />
-                <div className="container admincontainer">
+                <div className=" admincontainer">
+                    
                     <div className="table table-responsive">
+{/*                         
                         <ReactTable
                             columns={columns}
                             data={this.state.posts}
                             defaultPageSize={10}
                             >
-                        </ReactTable>
+                        </ReactTable> */}
                     </div>
                 </div>
             </div>

@@ -6,12 +6,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "material-ui": "^0.20.2",
+    "popper.js": "^1.16.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-table": "^7.0.0",
-    "react-table-6": "^6.11.0"
+    "react-table-6": "^6.11.0",
+    "resolve-url-loader": "^3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +36,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-loader": "^3.0.4",
+    "jquery": "^3.4.1",
+    "tether": "^1.4.7"
   }
 }

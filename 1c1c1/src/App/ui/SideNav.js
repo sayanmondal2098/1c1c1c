@@ -1,10 +1,11 @@
 import React from "react";
+import { } from "bootstrap";
 
-
+// import "../../Assect/css/argon.css"
 import "../../Assect/css/main.css"
 
 
-class Dashboard extends React.Component {
+class SideNav extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -17,27 +18,48 @@ class Dashboard extends React.Component {
     render() {
         return (
             <div>
-                <div className="sidenav navbar navbar-vertical  fixed-left">
-                    <div className="scrollbar-inner">
-                        <div>
-                            <div class="sidenav-header  align-items-center">
-                                <a class="navbar-brand"> 1C1C1 </a>
+                <div className="wrapper">
+                    <div className="sidebar" data-color="purple" >
+                        <div className="sidebar-wrapper">
+                            <div className="logo">
+                                <a href="" className="simple-text">
+                                    1C1C1
+        </a>
                             </div>
-                            <div className="navbar-inner">
-                                <div className="collapse navbar-collapse">
-                                    <ul className="navbar-nav">
-                                        <li className="nav-item">
-                                            <span className="nav-link-text">Dashboard</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <ul className="nav" style={{ paddingTop: "30%" }}>
+                                <li className="active" style={{ paddingTop: "50%" }}>
+                                    <a href="dashboard.html">
+                                        
+                                        <p>Dashboard</p>
+                                    </a>
+                                </li>
+                                <li className="active" style={{ paddingTop: "12%" }}>
+                                    <a href="dashboard.html">
+                                        
+                                        <p>Account</p>
+                                    </a>
+                                </li>
+                                <li className="active" style={{ paddingTop: "12%" }}>
+                                    <a href="dashboard.html">
+                                       
+                                        <p>Dashboard</p>
+                                    </a>
+                                </li>
+                                <li className="active" style={{ paddingTop: "12%" }}>
+                                    <a href="dashboard.html">
+                                        
+                                        <p>Log Out</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         );
     }
 }
 
-export default Dashboard
+export default SideNav

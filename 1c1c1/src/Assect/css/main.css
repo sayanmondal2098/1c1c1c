@@ -290,55 +290,76 @@ input.input100 {
   }
 }
 
-.sidenav {
-      height: 100% !important; /* 100% Full-height */
-      width: 10%; /* 0 width - change this with JavaScript */
-      position: fixed; /* Stay in place */
-      text-align: center;
-      /* display: block; */
-      z-index: 1; /* Stay on top */
-      background-color:rgb(128, 185, 223); 
-      color: black;
-      overflow-x: auto; /* Disable horizontal scroll */
-      padding-top: 3%;
-      padding-right: 3%;
-      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-      list-style-type: none;
-  }
 
-  .sidenav-header{
-    padding-bottom: 50%;
-  }
-  .sidenav_ul{
-      list-style-type: none;
-      padding: 5px;
-  }
-
-  .sidenav li {
-    margin-right: 20px;
-}
-li {
-    display: inline;
-    margin-right: 40px;
+.wrapper {
+  position: relative;
+  top: 0;
+  height: 100vh;
 }
 
-
-
-.div2 {
-  width: 300px;
-  height: 100px;
-  padding: 50px;
-  border: 1px solid red;
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  width: 260px;
+  display: block;
+  z-index: 1;
+  color: #fff;
+  font-weight: 200;
+  background-size: cover;
+  background-position: center center;
 }
 
+.sidebar .sidebar-wrapper {
+  position: relative;
+  max-height: calc(100vh - 75px);
+  min-height: 100%;
+  overflow: auto;
+  width: 260px;
+  z-index: 4;
+  padding-bottom: 100px;
+}
 
-.table{
-  width: 90%;
-  background-color: white;
+.sidebar .sidebar-background {
   position: absolute;
-  border: 2%;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
 }
 
-.table-responsive{
-  
+.sidebar .logo {
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .sidebar-wrapper {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: wheat;
+  background-color: #943be9;
+  position: relative;
+  max-height: calc(100vh - 75px);
+  min-height: 100%;
+  overflow: auto;
+  width: 260px;
+  z-index: 4;
+  padding-bottom: 100px;
+}
+
+/* .nav{
+  border: white;
+} */
+
+.sidebar .nav li.active > a {
+  color: #FFFFFF;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.23);
 }
