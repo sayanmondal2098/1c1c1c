@@ -11,32 +11,60 @@ class Login extends React.Component {
         super(props);
         let isLoggedIn = false
         this.state = {
-            username: '',
+            email: '',
             password: '',
-            isLoggedIn   
+            emailError: "",
+            passwordError: "",
+            isLoggedIn
         };
 
-        this.handleUsernameChange = this.handleUsernameChange.bind(this);
+        this.handleemailChange = this.handleemailChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleUsernameChange(event) {
-        this.setState({ 
-            username: event.target.value        
+    handleemailChange(event) {
+        this.setState({
+            email: event.target.value
         });
     }
 
-    handlePasswordChange(event){
+    handlePasswordChange(event) {
         this.setState({
             password: event.target.value
         })
     }
 
+    validate = () => {
+        let passwordError = "";
+        let emailError = "";
+        // let passwordError = "";
+
+        if (!this.state.password || (this.state.password).length<8) {
+            passwordError = "password cannot be blank or can't less then 8 char";
+        }else{
+            passwordError="";
+        }
+
+        if (!this.state.email.includes("@")) {
+            emailError = "invalid email";
+        }else{
+            emailError="";
+        }
+
+        if (emailError || passwordError) {
+            this.setState({ emailError, passwordError });
+            return false;
+        }
+
+        return true;
+    };
+
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.username + " pass: " + this.state.password);
         event.preventDefault();
-        if (this.state.username === 'Admin' && this.state.password === 'Admin123') {
+        this.validate();
+        alert('A name was submitted: ' + this.state.email + " pass: " + this.state.password);
+        if (this.state.email === 'Admin' && this.state.password === 'Admin123') {
             this.setState({
                 isLoggedIn: true
             })
@@ -48,7 +76,7 @@ class Login extends React.Component {
 
     render() {
         if (this.state.isLoggedIn) {
-            return <Redirect to="/Dash"/>
+            return <Redirect to="/Dash" />
         }
         return (
             <div>
@@ -59,25 +87,28 @@ class Login extends React.Component {
                                 <span class="login100-form-title p-b-33">
                                     1C1C1 Login
 					            </span>
+                                <div style={{ fontSize: 12, color: "red" }}>
+                                    {this.state.emailError || this.state.passwordError}
+                                </div>
                                 <div className="wrap-input100">
                                     <input className="input100"
                                         type="text"
-                                        name="username"
-                                        placeholder="Username"
-                                        value={this.state.username}
-                                        onChange={this.handleUsernameChange}>
+                                        name="email"
+                                        placeholder="email"
+                                        value={this.state.email}
+                                        onChange={this.handleemailChange}>
                                     </input>
                                     <span className="focus-input100-1"></span>
                                     <span className="focus-input100-2"></span>
                                 </div>
 
                                 <div className="wrap-input100">
-                                    <input class="input100" 
-                                    type="password" 
-                                    name="password" 
-                                    placeholder="Password"
-                                    value={this.state.password}
-                                    onChange={this.handlePasswordChange}
+                                    <input class="input100"
+                                        type="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        value={this.state.password}
+                                        onChange={this.handlePasswordChange}
                                     ></input>
                                     <span className="focus-input100-1"></span>
                                     <span className="focus-input100-2"></span>
@@ -85,7 +116,7 @@ class Login extends React.Component {
 
                                 <div className="m-t-20">
                                     <button className="login100-form-btn"
-                                     onClick={this.handleSubmit}>
+                                        onClick={this.handleSubmit}>
                                         Sign in
 						            </button>
                                 </div>
@@ -95,12 +126,12 @@ class Login extends React.Component {
 						            </span>
 
                                     <a href="localhost" class="txt2 hov1">
-                                        Username / Password?
+                                        email / Password?
 						            </a>
                                 </div>
 
                                 <div className="text-center p-t-45 p-b-4">
-                                    New User 
+                                    New User
                                     <a class="txt2 hov1" href="Registration">
                                         Register Here
                                     </a>

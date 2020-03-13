@@ -89,7 +89,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
+  /* padding-left: 20%; */
   background: #e9faff;
+}
+
+.admincontainer{
+  padding-left: 20%;
 }
 
 .wrap {
@@ -285,5 +290,55 @@ input.input100 {
   }
 }
 
+.sidenav {
+      height: 100% !important; /* 100% Full-height */
+      width: 10%; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      text-align: center;
+      /* display: block; */
+      z-index: 1; /* Stay on top */
+      background-color:rgb(128, 185, 223); 
+      color: black;
+      overflow-x: auto; /* Disable horizontal scroll */
+      padding-top: 3%;
+      padding-right: 3%;
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+      list-style-type: none;
+  }
+
+  .sidenav-header{
+    padding-bottom: 50%;
+  }
+  .sidenav_ul{
+      list-style-type: none;
+      padding: 5px;
+  }
+
+  .sidenav li {
+    margin-right: 20px;
+}
+li {
+    display: inline;
+    margin-right: 40px;
+}
 
 
+
+.div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+}
+
+
+.table{
+  width: 90%;
+  background-color: white;
+  position: absolute;
+  border: 2%;
+}
+
+.table-responsive{
+  
+}
