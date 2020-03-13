@@ -6,7 +6,7 @@ import "../../Assect/css/util.css"
 
 
 
-class Login extends React.Component {
+class Registration extends React.Component {
     constructor(props) {
         super(props);
         let isLoggedIn = false
@@ -34,15 +34,8 @@ class Login extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.username + " pass: " + this.state.password);
+        alert('A name was submitted: ' + this.state.username + "pass: " + this.state.password);
         event.preventDefault();
-        if (this.state.username === 'Admin' && this.state.password === 'Admin123') {
-            this.setState({
-                isLoggedIn: true
-            })
-        } else {
-            console.log("Error login")
-        }
         console.log(this.state)
     }
 
@@ -57,7 +50,7 @@ class Login extends React.Component {
                         <div className="wrap p-l-55 p-r-55 p-t-65 p-b-50">
                             <div className="login100-form validate-form">
                                 <span class="login100-form-title p-b-33">
-                                    1C1C1 Login
+                                    1C1C1 Registration
 					            </span>
                                 <div className="wrap-input100">
                                     <input className="input100"
@@ -86,7 +79,7 @@ class Login extends React.Component {
                                 <div className="m-t-20">
                                     <button className="login100-form-btn"
                                      onClick={this.handleSubmit}>
-                                        Sign in
+                                        Sign Up
 						            </button>
                                 </div>
                                 <div className="text-center p-t-45 p-b-4">
@@ -100,9 +93,9 @@ class Login extends React.Component {
                                 </div>
 
                                 <div className="text-center p-t-45 p-b-4">
-                                    New User 
-                                    <a class="txt2 hov1" href="Registration">
-                                        Register Here
+                                    Have an account 
+                                    <a class="txt2 hov1" href="Login">
+                                        Login Here
                                     </a>
                                 </div>
 
@@ -117,4 +110,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login
+export default Registration
