@@ -66,7 +66,7 @@ class Dashboard extends React.Component {
                 <div className=" admincontainer">
                     <div>
                         <h2>Account Information : </h2>
-                        <br />
+                        <br />np
                         <ReactTable
 
                             columns={Accounts}

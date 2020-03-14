@@ -1,5 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import axios from 'axios';
+
 
 import "../../Assect/css/main.css"
 import "../../Assect/css/util.css"
@@ -40,16 +42,16 @@ class Login extends React.Component {
         let emailError = "";
         // let passwordError = "";
 
-        if (!this.state.password || (this.state.password).length<8) {
+        if (!this.state.password || (this.state.password).length < 8) {
             passwordError = "password cannot be blank or can't less then 8 char";
-        }else{
-            passwordError="";
+        } else {
+            passwordError = "";
         }
 
         if (!this.state.email.includes("@")) {
             emailError = "invalid email";
-        }else{
-            emailError="";
+        } else {
+            emailError = "";
         }
 
         if (emailError || passwordError) {
@@ -60,10 +62,28 @@ class Login extends React.Component {
         return true;
     };
 
+    checker() {
+           fetch(`http://localhost:8080/Ucase1_2/account-statement`, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              cid : this.state.password
+            })
+          }) .then(response => response.json(), console.log(response))
+
+    }
+
     handleSubmit(event) {
         event.preventDefault();
+        this.checker();
         this.validate();
         alert('A name was submitted: ' + this.state.email + " pass: " + this.state.password);
+
+
+
         if (this.state.email === 'Admin' && this.state.password === 'Admin123') {
             this.setState({
                 isLoggedIn: true
